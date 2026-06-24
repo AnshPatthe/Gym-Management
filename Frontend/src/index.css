@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gym-black text-white font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-gym-charcoal/80 backdrop-blur-md border border-gym-gray;
+  }
+  
+  .glass-card {
+    @apply glass rounded-xl shadow-lg hover:shadow-gym-red/10 transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-gym-red hover:bg-gym-darkred text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-gym-red/20;
+  }
+
+  .btn-secondary {
+    @apply bg-gym-gray hover:bg-gym-charcoal border border-gym-lightgray/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full bg-gym-black/50 border border-gym-gray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gym-red focus:ring-1 focus:ring-gym-red transition-all duration-300;
+  }
+  
+  /* Scrollbar custom styling for a premium feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gym-black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gym-gray rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gym-red/50;
+  }
+}
